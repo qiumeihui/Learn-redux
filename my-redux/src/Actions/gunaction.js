@@ -1,0 +1,1 @@
+//如果是入门demo的话，只对一两个状态进行提交action和改变，则不用特意声明Actions文件，所以这里置空，reducer中也不用引入action

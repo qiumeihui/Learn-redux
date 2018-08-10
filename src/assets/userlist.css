@@ -1,0 +1,8 @@
+.list-box{
+    width:220px;
+    height: 600px;
+    background-color:#666666;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-self: center;
+}

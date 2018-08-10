@@ -1,0 +1,19 @@
+.client{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:60px;
+    background-color:#333333;
+    border-bottom:1px solid white;
+    color:white;
+    font-size:13px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+}
+
+.status-btn{
+    width:55px;
+    flex-direction:column;
+}

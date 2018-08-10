@@ -4,7 +4,7 @@ const initialState = {
 };
 
 const reducer = (state = initialState,action)=>{
-    console.log(action)
+    console.log(action);
     switch (action.type) {
         case 'ADD_GUN':
             return {...state,counts:state.counts+100,color:action.color,textcolor:action.textcolor}

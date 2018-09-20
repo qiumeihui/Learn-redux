@@ -22,7 +22,7 @@ class App extends Component {
         <hr/>
         <Ownform/>
 
-        <Link to='/chat'><button>在线客服</button></Link>
+        <Link to='chat/12'><button>在线客服</button></Link>
       </div>
     );
   }

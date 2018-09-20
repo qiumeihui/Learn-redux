@@ -12,7 +12,7 @@ class TalkItem extends Component{
         }
     }
     componentDidMount(){
-        if(this.props.type == 0){
+        if(this.props.type === 0){
             this.setState({
                 userlogo:'xxx',
                 class:'left-message',

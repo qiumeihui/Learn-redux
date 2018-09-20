@@ -1,6 +1,6 @@
 import React,{ Component } from "react";
 import { connect } from 'react-redux';
-import {addComments,deleteComments,colorComments} from '.././Reducers/reducer';
+import { addComments,deleteComments,colorComments } from '../Actions/action';
 
 class Football extends Component{
     constructor(props){
@@ -20,6 +20,8 @@ class Football extends Component{
 }
 
 const mapStateToProps= (state)=>{
+    var state = state.football;
+    console.log(state)
     return{
         counts:state.footballscount,
         mycolor:state.color

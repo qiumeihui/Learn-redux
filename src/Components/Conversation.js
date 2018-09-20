@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import '../assets/conversation.css';
+import myaxios from '../utils/util.js';
+import axios from 'axios';
+import '../Mock/mock';
+import { withRouter } from 'react-router-dom';
 
 class Conversation extends Component{
     constructor(props){
         super(props);
         this.state = {
-            ifStartTalk:false
+            ifStartTalk:false,
+            resdata:""
         }
     }
     render(){
@@ -25,7 +30,7 @@ class Conversation extends Component{
         )
     }
     openTalk2(){
-            if(this.state.ifStartTalk == true){
+        if(this.state.ifStartTalk === true){
                 this.props.dispatch({
                 type:'OPEN_PANEL',
                 currentTalkname:this.props.info.name,
@@ -34,17 +39,24 @@ class Conversation extends Component{
             })
         }
     }
+   
     openTalk(){
-        this.setState({
-            ifStartTalk:true
+        //mock返回假数据
+        axios({
+            method:'get',
+            url:'/chat-res'
         })
+        .then(res=>{
+            console.log(res.data)
+        })
+
         this.props.dispatch({
             type:'OPEN_PANEL',
             currentTalkname:this.props.info.name,
             currentTalktel:this.props.info.tel,
-            currentTalkid:this.props.info.id
+            currentTalkid:this.props.info.id,
         })
     }
 }
 
-export default connect()(Conversation);
+export default withRouter(connect()(Conversation));

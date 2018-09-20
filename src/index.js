@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'antd/dist/antd.css';
 import registerServiceWorker from './registerServiceWorker';
-import { Route,BrowserRouter as Router,Switch } from 'react-router-dom';
-import {Provider} from 'react-redux';
+import { Route,HashRouter as Router,Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import store from './Store/store';
 
 
@@ -17,7 +18,7 @@ ReactDOM.render(
         <Router>
             <Switch>
                 <Route exact path="/" component={App} />
-                <Route path="/chat" component={WeChat} />
+                <Route path="/chat/:id" component={WeChat} />
             </Switch>
         </Router>
     </Provider>, document.getElementById('root'));

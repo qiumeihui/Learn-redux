@@ -1,6 +1,6 @@
 import React,{ Component } from 'react';
 import {connect} from 'react-redux';
-import {colorComments} from '.././Reducers/reducer';
+import { colorComments } from '../Actions/action';
 
 class Ownform extends Component{
     constructor(props){
@@ -24,7 +24,7 @@ class Ownform extends Component{
 
 const mapStateToProps = (state)=>{
     return{
-        username:state.username
+        // username:state.messageReducer.username
     }
 }
 const mapDispatchToProps = (dispatch)=>{
